@@ -3,6 +3,8 @@ import subprocess
 import sys
 
 def build_app():
+    print("Installing requirements...")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", r"desktop_app\api\requirements.txt"])
     print("Installing PyInstaller...")
     subprocess.check_call([sys.executable, "-m", "pip", "install", "pyinstaller"])
     
