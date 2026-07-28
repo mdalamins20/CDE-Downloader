@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+desktop_app/api/venv/
+
+# Build and Distribution
+build/
+dist/
+*.deb
+*.crx
+*.zip
+*.tar.gz
+*.exe
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.log

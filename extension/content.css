@@ -1,0 +1,380 @@
+/* Root container reset for the photo downloader button */
+.photo-downloader-btn {
+  all: initial;
+  position: absolute !important;
+  z-index: 2147483647 !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  opacity: 0 !important;
+  transform: scale(0.9) translate3d(0, 0, 0) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease !important;
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Make it visible when hovered */
+.photo-downloader-btn.visible {
+  opacity: 1 !important;
+  transform: scale(1) translate3d(0, 0, 0) !important;
+}
+
+/* Hover effects */
+.photo-downloader-btn:hover {
+  background: #f3f4f6 !important;
+  border-color: #9ca3af !important;
+}
+
+/* Click feedback */
+.photo-downloader-btn:active {
+  transform: scale(0.95) translate3d(0, 0, 0) !important;
+}
+
+/* Icon style inside button */
+.photo-downloader-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #111827 !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  pointer-events: none !important;
+}
+
+/* Downloader button success state styling */
+.photo-downloader-btn.success {
+  background: #10b981 !important;
+  border-color: #059669 !important;
+}
+.photo-downloader-btn.success svg { color: #ffffff !important; }
+
+/* Downloader button error state styling */
+.photo-downloader-btn.error {
+  background: #ef4444 !important;
+  border-color: #dc2626 !important;
+}
+.photo-downloader-btn.error svg { color: #ffffff !important; }
+
+/* Root container reset for the video downloader button */
+.video-downloader-btn {
+  all: initial;
+  position: absolute !important;
+  z-index: 2147483647 !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  opacity: 0 !important;
+  transform: scale(0.9) translate3d(0, 0, 0) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease !important;
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Make it visible when hovered */
+.video-downloader-btn.visible {
+  opacity: 1 !important;
+  transform: scale(1) translate3d(0, 0, 0) !important;
+}
+
+/* Hover effects */
+.video-downloader-btn:hover {
+  background: #f3f4f6 !important;
+  border-color: #9ca3af !important;
+}
+
+/* Click feedback */
+.video-downloader-btn:active {
+  transform: scale(0.95) translate3d(0, 0, 0) !important;
+}
+
+/* Icon style inside button */
+.video-downloader-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  color: #111827 !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  pointer-events: none !important;
+}
+
+/* Downloader button success state styling */
+.video-downloader-btn.success {
+  background: #10b981 !important;
+  border-color: #059669 !important;
+}
+.video-downloader-btn.success svg { color: #ffffff !important; }
+
+/* Downloader button error state styling */
+.video-downloader-btn.error {
+  background: #ef4444 !important;
+  border-color: #dc2626 !important;
+}
+.video-downloader-btn.error svg { color: #ffffff !important; }
+
+/* Spin Keyframe for loading state */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Loading state */
+.video-downloader-btn.loading svg,
+.video-downloader-btn svg[style*="spin"] {
+  animation: spin 1s linear infinite !important;
+}
+
+/* IDM Style Modal Overlay (Minimalist) */
+.video-downloader-modal-overlay {
+  all: initial;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(5px) !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0;
+  transition: opacity 0.3s ease !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.video-downloader-modal-overlay.visible {
+  opacity: 1;
+}
+
+/* IDM Style Modal Box */
+.video-downloader-modal {
+  all: initial;
+  background: rgba(17, 24, 39, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  width: 380px !important;
+  padding: 24px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(10px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.video-downloader-modal-overlay.visible .video-downloader-modal {
+  transform: translateY(0) scale(1);
+}
+
+.vdm-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 20px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-bottom: 12px !important;
+}
+
+.vdm-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+}
+
+.vdm-close {
+  background: transparent !important;
+  border: none !important;
+  color: #9ca3af !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  padding: 4px !important;
+  line-height: 1 !important;
+  border-radius: 4px !important;
+}
+
+.vdm-close:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.vdm-body {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.vdm-form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.vdm-label {
+  font-size: 13px !important;
+  color: #d1d5db !important;
+  font-weight: 500 !important;
+}
+
+.vdm-select, .vdm-input {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 6px !important;
+  padding: 10px 12px !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  outline: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.vdm-select:focus, .vdm-input:focus {
+  border-color: #3b82f6 !important;
+}
+
+.vdm-select option {
+  background: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+.vdm-footer {
+  margin-top: 24px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+}
+
+.vdm-btn {
+  padding: 10px 18px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.vdm-btn-cancel {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.vdm-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.vdm-btn-download {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+  color: #ffffff !important;
+}
+
+.vdm-btn-download:hover {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+}
+
+/* IDM Progress Modal */
+.hd-progress-modal-overlay {
+  all: initial;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0;
+  transition: opacity 0.3s ease !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  pointer-events: none !important;
+}
+
+.hd-progress-modal-overlay.visible {
+  opacity: 1;
+  pointer-events: auto !important;
+}
+
+.hd-progress-modal {
+  all: initial;
+  background: rgba(17, 24, 39, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  width: 320px !important;
+  padding: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.hdp-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-bottom: 8px !important;
+}
+
+.hdp-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+}
+
+.hdp-close {
+  background: transparent !important;
+  border: none !important;
+  color: #9ca3af !important;
+  cursor: pointer !important;
+  font-size: 18px !important;
+  padding: 0 !important;
+}
+
+.hdp-close:hover {
+  color: #ffffff !important;
+}
+
+.hdp-bar-container {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 4px !important;
+  height: 8px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.hdp-bar {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6) !important;
+  height: 100% !important;
+  width: 0% !important;
+  transition: width 0.5s ease !important;
+}
+
+.hdp-stats {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 12px !important;
+  color: #d1d5db !important;
+}
