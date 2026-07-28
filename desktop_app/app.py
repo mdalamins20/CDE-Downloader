@@ -13,15 +13,21 @@ from datetime import datetime
 ctk.set_appearance_mode("Dark")
 ctk.set_default_color_theme("blue")
 
+# This forces PyInstaller to analyze and include main.py and ALL its dependencies
+if False:
+    from api import main
+
 def run_fastapi_server():
     try:
         import uvicorn
         api_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'api')
-        if api_dir not in sys.path:
-            sys.path.insert(0, api_dir)
-        import main
+        from api import main
         uvicorn.run(main.app, host="127.0.0.1", port=8000, log_level="warning")
     except Exception as e:
+        import traceback
+        error_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'server_error.txt')
+        with open(error_file, 'w') as f:
+            f.write(traceback.format_exc())
         print(f"Server error: {e}")
 
 class HDVideoDownloaderApp(ctk.CTk):
